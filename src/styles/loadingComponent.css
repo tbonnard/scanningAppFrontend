@@ -1,0 +1,16 @@
+.loadingDiv {
+    z-index:1000 ; 
+    width:100%; 
+    height:100%; 
+    position: fixed; 
+    top: 0%;
+    left: 0%; 
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+    background-color: #bf7a6b;
+    background-image: -webkit-linear-gradient(bottom left, #bf7a6b 0%, #e6d8a7 100%);
+    background-image: linear-gradient(to top right,#bf7a6b 0%, #e6d8a7 100%);
+}
+
+
