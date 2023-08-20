@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { resetProperty } from '../../reducers/propertyReducer'
 import { resetMessages } from '../../reducers/messagesReducer'
 import { setLoading } from '../../reducers/loadingReducer';
+import { setnotifClaimerReducer } from '../../reducers/notifClaimerReducer';
 
 import '../../styles/header.css'
 import notificationIcon from '../../media/notification.png'
@@ -38,6 +39,10 @@ const Header = () => {
     }
   }
 
+  const handleClickNotification = () => {
+    dispatch(setnotifClaimerReducer(true))
+  }
+
   return (
     <div className={classHeader}>
       <div className='App-header'>
@@ -46,7 +51,7 @@ const Header = () => {
         </div>
         {property.number &&  <div >
           Number: <span className='App-header-divNumber'>{property.number}</span>
-          <img className='notificationIcon' src={notificationIcon} />
+          <img className='notificationIcon' src={notificationIcon} onClick={handleClickNotification}/>
         </div>
               
         }

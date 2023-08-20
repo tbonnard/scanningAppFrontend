@@ -3,6 +3,12 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 
 import { claimProperty } from '../../reducers/claimReducer';
+import { setnotifClaimerReducer } from '../../reducers/notifClaimerReducer';
+
+
+import closeIcon from '../../media/close.png'
+import '../../styles/claimerGlobal.css'
+
 
 const Claimer = () => {
     
@@ -16,21 +22,34 @@ const Claimer = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        const itemObject = {email, property:property.number}
+        const itemObject = {email, property:property.id}
         dispatch(claimProperty(itemObject))
+        dispatch(setnotifClaimerReducer(false))
     }
 
+    const closeClaimNotif = () => {
+        dispatch(setnotifClaimerReducer(false))
+    }
 
   return (
-    <div >
-        <h2>Claim the property</h2>
-        <p>claiming a property will allow you to receive notifications when a new message is sent</p>
-        <form onSubmit={handleSubmit}>
-            <div className=''>
-                <input type="email" placeholder='your email' value={email} onChange={(e) => setEmail(e.target.value)} required/>
-                <button type='submit'>claim</button>
-            </div>
-        </form>
+    <div className='claimerGlobal'>
+              <img className='closeIcon' 
+                        src={closeIcon}  
+                        onClick={closeClaimNotif}
+                        alt='cancel - close'
+                        width={"30px"}
+                    />
+
+        <div className='claimerDiv'>
+            <h2>Claim the property</h2>
+            <p>claiming a property will allow you to receive notifications when a new message is sent</p>
+            <form onSubmit={handleSubmit}>
+                <div className=''>
+                    <input type="email" placeholder='your email' value={email} onChange={(e) => setEmail(e.target.value)} required/>
+                    <button type='submit'>claim</button>
+                </div>
+            </form>
+        </div>
   </div>
   )
 }

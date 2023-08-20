@@ -41,6 +41,7 @@ function App() {
   const dispatch = useDispatch()
   
   const property = useSelector(state => state.property)
+  const notifClaimer = useSelector(state => state.notifClaimer)
 
   const getCountry = () => {
         // var requestUrl = "http://ip-api.com/json"    // this one also free for non commercial - no key
@@ -73,7 +74,9 @@ function App() {
               <Header />
               <Messages />
               <MessageForm />
-              {/* <Claimer /> */}
+              {notifClaimer &&
+                <Claimer />
+              }
             </>         
             : 
             <Header />

@@ -8,13 +8,16 @@ import messagesReducer from './reducers/messagesReducer'
 import claimReducer from './reducers/claimReducer';
 import loadingReducer from './reducers/loadingReducer';
 import notificationReducer from './reducers/notificationReducer';
+import notifClaimerReducer from './reducers/notifClaimerReducer'
+
 
 const appReducer = combineReducers({
   property:propertyReducer,
   messages:messagesReducer,
   claimProperties : claimReducer,
   loadingFlag : loadingReducer,
-  notificationFlag: notificationReducer
+  notificationFlag: notificationReducer,
+  notifClaimer:notifClaimerReducer
   })
   
   const rootReducer = (state, action) => {
