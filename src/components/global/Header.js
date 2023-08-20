@@ -9,7 +9,7 @@ import { resetMessages } from '../../reducers/messagesReducer'
 import { setLoading } from '../../reducers/loadingReducer';
 
 import '../../styles/header.css'
-
+import notificationIcon from '../../media/notification.png'
 
 const Header = () => {
     
@@ -44,10 +44,11 @@ const Header = () => {
         <div className='App-header-divLogo'>
           <Link className='' to="/" onClick={handleClick}>[appName]</Link>
         </div>
-        {property.number &&
-        <div >
+        {property.number &&  <div >
           Number: <span className='App-header-divNumber'>{property.number}</span>
+          <img className='notificationIcon' src={notificationIcon} />
         </div>
+              
         }
       </div>
   </div>

@@ -42,3 +42,13 @@ display: flex;
 .App-header-divNumber{
   font-weight: bold;
 }
+
+.notificationIcon{
+  width: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.notificationIcon:hover{
+ opacity: 0.8;
+}
