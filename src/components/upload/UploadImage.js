@@ -45,13 +45,12 @@ const UploadImage = () => {
     dispatch(setLoading(true))
     setLoading(true)
     setImageState(e.target.files[0])
-    
     let form_data = new FormData();
     form_data.append('image', e.target.files[0]);
-    // const url = 'http://127.0.0.1:8000/api/uploadimage/';
-    const url = 'https://scanningapp.pythonanywhere.com/api/uploadimage/';
 
-    
+    const baseUrl = process.env.NODE_ENV === 'production' ? process.env.REACT_APP_PROD_URL : process.env.REACT_APP_DEV_URL;
+    const url = `${baseUrl}api/uploadimage/`
+
     axios.post(url, form_data, {
       headers: {
         'content-type': 'multipart/form-data'

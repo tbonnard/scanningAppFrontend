@@ -1,17 +1,17 @@
 import axios from 'axios'
 
-// const baseUrl = 'http://127.0.0.1:8000/api/messages/'
-// const baseCreateUrl = 'http://127.0.0.1:8000/api/message/'
-const baseUrl = 'https://scanningapp.pythonanywhere.com/api/messages/'
-const baseCreateUrl = 'https://scanningapp.pythonanywhere.com/api/message/'
+const baseUrl = process.env.NODE_ENV === 'production' ? process.env.REACT_APP_PROD_URL : process.env.REACT_APP_DEV_URL;
+const urlCreate = `${baseUrl}api/message/`
+const url = `${baseUrl}api/messages/`
+
 
 const getMessagesfromProperty = async (itemObject) => {
-  const response = await axios.get(`${baseUrl}${itemObject.number}` );
+  const response = await axios.get(`${url}${itemObject.number}` );
   return response.data
 }
 
 const createMessage = async (itemObject) => {
-    const response = await axios.post(`${baseCreateUrl}`, itemObject );
+    const response = await axios.post(`${urlCreate}`, itemObject );
     return response.data
     
 }

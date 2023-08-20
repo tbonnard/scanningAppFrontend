@@ -1,10 +1,11 @@
 import axios from 'axios'
 
-// const baseUrl = 'http://127.0.0.1:8000/api/get-csrf-token/'
-const baseUrl = 'https://scanningapp.pythonanywhere.com/api/get-csrf-token/'
+
+const baseUrl = process.env.NODE_ENV === 'production' ? process.env.REACT_APP_PROD_URL : process.env.REACT_APP_DEV_URL;
+const url = `${baseUrl}api/get-csrf-token/`
 
 const getCsrfToken  = async () => {
-  const response = await axios.post(`${baseUrl}`)
+  const response = await axios.post(`${url}`)
   // console.log(response.data)
   document.cookie = `csrftoken=${response.data.csrftoken}; Path=/`;
   return response.data;

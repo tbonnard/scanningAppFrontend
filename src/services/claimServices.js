@@ -1,10 +1,11 @@
 import axios from 'axios'
 
-// const baseUrl = 'http://127.0.0.1:8000/api/claim/'
-const baseUrl = 'https://scanningapp.pythonanywhere.com/api/claim/'
+const baseUrl = process.env.NODE_ENV === 'production' ? process.env.REACT_APP_PROD_URL : process.env.REACT_APP_DEV_URL;
+const url = `${baseUrl}api/claim/`
+
 
 const claimProperty = async (itemObject) => {
-  const response = await axios.post(`${baseUrl}`, itemObject );
+  const response = await axios.post(`${url}`, itemObject );
   return response.data
 }
 
