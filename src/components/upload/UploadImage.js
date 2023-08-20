@@ -48,7 +48,9 @@ const UploadImage = () => {
     
     let form_data = new FormData();
     form_data.append('image', e.target.files[0]);
-    const url = 'http://127.0.0.1:8000/api/uploadimage/';
+    // const url = 'http://127.0.0.1:8000/api/uploadimage/';
+    const url = 'https://scanningapp.pythonanywhere.com/api/uploadimage/';
+
     
     axios.post(url, form_data, {
       headers: {
