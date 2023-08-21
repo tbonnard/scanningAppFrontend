@@ -10,6 +10,15 @@ export const propertyCreation = (itemObject) => {
     }
 }
 
+export const setPropertyItem = (itemObject) => {
+    return async dispatch => {
+        dispatch({
+            type: "SET_PROPERTY_ITEM",
+            data: itemObject
+            })
+    }
+}
+
 export const propertyItem = (itemObject) => {
     return async dispatch => {
         dispatch({
@@ -34,6 +43,8 @@ const propertyReducer = (state=[], action) => {
             return action.data
         case 'TEMP_PROPERTY_SELECTED':
             return action.data
+        case 'SET_PROPERTY_ITEM':
+                return action.data
         case 'RESET_PROPERTY':
             return action.data
         default:

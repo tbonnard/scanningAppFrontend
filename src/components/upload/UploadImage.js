@@ -92,7 +92,6 @@ const UploadImage = () => {
     dispatch(propertyCreation(itemObject))
     resetGlobal()
     resetInputUploadImageManualField()
-    // navigate(`/messages/`)
   }
 
  

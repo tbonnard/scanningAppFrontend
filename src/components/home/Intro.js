@@ -1,5 +1,7 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
+
+import { useDispatch } from 'react-redux'
 
 import UploadImage from '../upload/UploadImage'
 
@@ -7,7 +9,13 @@ import '../../styles/intro.css'
 import backimg from '../../media/backimage.png'
 
 const Intro = () => {
-    
+  
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+      window.scrollTo({left: 0, top:0,  behavior: "smooth"});
+}, [dispatch])
+
   return (
     <>
     <div className='intro'>

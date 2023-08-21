@@ -5,6 +5,7 @@ const url = `${baseUrl}api/property/`
 
 const propertyCreation = async (itemObject) => {
   const response = await axios.post(`${url}`, itemObject  );
+  localStorage.setItem('propertyScanningApp', JSON.stringify(response.data));
   return response.data
 
 }

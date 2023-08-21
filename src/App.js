@@ -3,7 +3,7 @@ import './styles/app.css';
 import './styles/buttons.css';
 
 
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 
 
@@ -20,8 +20,6 @@ import axios from 'axios'
 import csrfServices from './services/getCsrfApp'
 
 import Messages from './components/messages/Messages'
-import MessageForm from './components/messages/MessageForm'
-import Claimer from './components/messages/Claimer';
 
 import Header from './components/global/Header';
 import LoadingComponent from './components/global/LoadingComponent';
@@ -35,13 +33,11 @@ import Transparency from './components/home/Transparency'
 
 import { setNotification } from './reducers/notificationReducer';
 
-
 function App() {
   
   const dispatch = useDispatch()
   
   const property = useSelector(state => state.property)
-  const notifClaimer = useSelector(state => state.notifClaimer)
 
   const getCountry = () => {
         // var requestUrl = "http://ip-api.com/json"    // this one also free for non commercial - no key
@@ -68,20 +64,10 @@ function App() {
         
   
         <Route path='/messages'  element={        
-          <>
-          {property.number ? 
             <>
               <Header />
               <Messages />
-              <MessageForm />
-              {notifClaimer &&
-                <Claimer />
-              }
             </>         
-            : 
-            <Header />
-            }
-          </>
           } />
 
         <Route path='/'  element={
