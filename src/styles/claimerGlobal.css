@@ -13,4 +13,12 @@
 .claimerDiv {
     text-align: center;
     padding-top: 200px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.claimerFormDiv{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
 }

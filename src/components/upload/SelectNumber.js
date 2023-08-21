@@ -58,7 +58,7 @@ const SelectNumber = ({items, setItems, image, editNumber, setManualNumberFlag})
                     />
             <div className='selectNumberDiv'>
     
-            <p className='selectNumberTitle'>select the correct number</p>
+            <h3 className='selectNumberTitle'>select the correct number</h3>
 
             <div className='selectionDiv'>
                 <fieldset className='selectionFieldset'>

@@ -5,8 +5,15 @@ const url = `${baseUrl}api/claim/`
 
 
 const claimProperty = async (itemObject) => {
+  console.log('bonjour')
   const response = await axios.post(`${url}`, itemObject );
-  return response.data
+  console.log(response.status)
+  if (response.status.code === 400) {    
+    return []
+  }
+  else {
+    return response.data
+  }
 }
 
 

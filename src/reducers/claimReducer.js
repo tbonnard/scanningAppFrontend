@@ -2,10 +2,10 @@ import claimServices from '../services/claimServices'
 
 export const claimProperty = (itemObject) => {
     return async dispatch => {
-        const messages = await claimServices.claimProperty(itemObject)
+        const claim = await claimServices.claimProperty(itemObject)
         dispatch({
             type: "CLAIM",
-            data: messages
+            data: claim
             })
     }
 }

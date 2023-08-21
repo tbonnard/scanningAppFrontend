@@ -41,12 +41,12 @@ const Claimer = () => {
                     />
 
         <div className='claimerDiv'>
-            <h2>Claim the property</h2>
+            <h2 className='selectNumberTitle'>Claim the property</h2>
             <p>claiming a property will allow you to receive notifications when a new message is sent</p>
-            <form onSubmit={handleSubmit}>
-                <div className=''>
-                    <input type="email" placeholder='your email' value={email} onChange={(e) => setEmail(e.target.value)} required/>
-                    <button type='submit'>claim</button>
+            <form onSubmit={handleSubmit} >
+                <div className='claimerFormDiv'>
+                    <input className='enterTextNumber messageFormInput' type="email" placeholder='your email' value={email} onChange={(e) => setEmail(e.target.value)} required/>
+                    <button className="buttonPrimary" type='submit'>claim</button>
                 </div>
             </form>
         </div>
