@@ -65,7 +65,7 @@ const SelectNumber = ({items, setItems, image, editNumber, setManualNumberFlag})
                     <legend>Select the correct number:</legend>
                     {items.map((img, index) => 
                     <div key={index} className='selectColumns'>
-                        <div  className='selectItemDiv'>
+                        <div  className='enterTextForm messageForm'>
                             <input type="radio" id={img} name={img} value={img} checked={checkedResult === img} onChange={handleChangeCheckedText}/>
                             <label htmlFor={img} className={checkedResult === img ? 'itemSelected' : ''}>{img}</label>
                         </div>
