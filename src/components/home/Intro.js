@@ -25,7 +25,7 @@ const Intro = () => {
             communicate with other vehicules
         </div>
         <div className='descriptionText'>
-        [appName] is an easy tool that lets you add a message to any other vehicules! All hateful messages will be censored to make sure people send respectful and constructive messages!
+        [appName] is an easy tool that lets you send a message to other vehicules! Inappropriate messages will be censored to make sure people send respectful and constructive messages!
         </div>
         <UploadImage />
       </div>
