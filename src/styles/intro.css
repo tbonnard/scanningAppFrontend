@@ -33,7 +33,24 @@
   margin: 0 auto;
 }
 
+.standardDiv h3 {
+  padding-bottom: 100px;
+}
+
 .descriptionText{
   /* width: 95%; */
-  padding: 0 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+.imageHowITWorks {
+  width: 30px;
+  margin-bottom: 20px;
+}
+
+.descriptionDivFlex {
+  display: flex;
+  align-items: center;
+  text-align: center;
+
 }

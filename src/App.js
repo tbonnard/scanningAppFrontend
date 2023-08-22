@@ -75,9 +75,9 @@ function App() {
           <LoadingComponent />
           <Header />
           <Intro />
-          <Examples />
           <HowItWorks />
-          <Transparency />
+          <Examples />
+          {/* <Transparency /> */}
           </>
           } />
 

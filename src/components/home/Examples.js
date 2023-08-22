@@ -6,15 +6,15 @@ const Examples = () => {
   return (
     <div className='standardContainer'>
       <div className='standardDiv'>
-          <h3 className='descriptionText'>examples</h3>
+          <h3 className='descriptionText'>EXAMPLES</h3>
             <div className='descriptionText'>
-                A car is parked on your place
+              a car is parked in your space
             </div>
             <div className='descriptionText'>
-                A car blocks a way
+                A car blocks a driveway
             </div>
             <div className='descriptionText'>
-            send a respectuf message and the owner will be notified
+            car headlight no longer works
             </div>
           </div>
       </div>
