@@ -1,5 +1,5 @@
 .intro {
-  height: 1000px;
+  height: 800px;
   padding-top: 150px;
   background: var(--main);
   background: linear-gradient(180deg, rgba(53,69,114,1) 6%, rgba(95,108,143,1) 36%, rgba(255,255,255,1) 95%); 
@@ -17,7 +17,7 @@
   background-image: url('../media/backimage.png');
   background-repeat: no-repeat;
   background-position: bottom;
-  height: 700px;
+  height: 550px;
 }
 
 .standardContainer {
@@ -29,18 +29,22 @@
 .standardDiv{
   color: var(--colorText);;
   max-width: 900px;
-  padding-top: 50px;
   margin: 0 auto;
+  margin-top: -200px;
+  margin-bottom: 200px;
 }
 
 .standardDiv h3 {
-  padding-bottom: 100px;
+  padding-bottom: 75px;
 }
 
-.descriptionText{
+.title{
+  color: var(--main);
+}
+.descriptionText {
   /* width: 95%; */
   padding: 10px;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .imageHowITWorks {
@@ -52,5 +56,11 @@
   display: flex;
   align-items: center;
   text-align: center;
+
+}
+
+.descriptionSubText{
+  text-align: center;
+  padding: 0 5px 40px 5px;
 
 }

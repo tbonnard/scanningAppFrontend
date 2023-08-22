@@ -76,7 +76,7 @@ function App() {
           <Header />
           <Intro />
           <HowItWorks />
-          <Examples />
+          {/* <Examples /> */}
           {/* <Transparency /> */}
           </>
           } />

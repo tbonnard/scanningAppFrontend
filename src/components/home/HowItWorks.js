@@ -10,8 +10,13 @@ const HowItWorks = () => {
   return (
     <div className='standardContainer' id='howItWorks'>
       <div className='standardDiv'>
-        <h3 className='descriptionText '>HOW IT WORKS</h3>
-        <div className='descriptionDivFlex'>
+        <h3 className='descriptionText title'>HOW IT WORKS</h3>
+        <p className='descriptionSubText'>
+        let's say there's a vehicle parked in your space, or it's blocking a driveway, 
+        or it's got a broken light and you want to let it know
+        </p>
+
+          <div className='descriptionDivFlex'>
             <div className='descriptionText'>
               <img src={uploadIconHome} className='imageHowITWorks' />
                 <p>upload a license plate image (or enter it manually)</p>
